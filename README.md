@@ -6,3 +6,5 @@ Développement web - Projet vous êtes le héros
 **Inspiration:** World War Z
 
 **Pallete de couleurs:**
+
+![image de la pallete de couleurs]()

@@ -5,7 +5,7 @@
 
 **Inspiration:** World War Z
 
-**Pallete de couleurs:**
+**Pallete de couleurs:** [coolors.co](https://coolors.co/fb8b24-e36414-614f3e-000000)
 
 ![image de la pallete de couleurs](assets/images/github_couleurs.drawio.png)
 

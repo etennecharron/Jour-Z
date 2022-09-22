@@ -7,4 +7,4 @@ Développement web - Projet vous êtes le héros
 
 **Pallete de couleurs:**
 
-![image de la pallete de couleurs]()
+![image de la pallete de couleurs](medias/github_couleurs.drawio.png)

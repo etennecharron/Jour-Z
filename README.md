@@ -1,5 +1,5 @@
 # Jour_Z
-**[Développement web - Projet vous êtes le héros](file:///C:/Users/%C3%89tienne/OneDrive%20-%20Coll%C3%A8ge%20Montmorency/Documents/GitHub/Jour-Z/index.html)**
+**[Développement web - Projet vous êtes le héros](https://smnarnold.com/projets/vous-etes-le-heros/repo-github)**
 
 **Genre:** apocalyptique, horreur
 

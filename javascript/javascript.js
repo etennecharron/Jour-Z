@@ -130,7 +130,7 @@ let chaptersObj = {
     },
     chapitre12 : {
     subtitle : "Fin",
-    text : "Vous êtes arriver a un refuge! bravo!!!" , 
+    text : "Vous êtes arriver a un refuge! bravo!!!" ,  
     img : "masque.jpg",
     }
     } 

@@ -126,29 +126,36 @@ let chaptersObj = {
     subtitle : "Mort7",
     text : "Vous vous perdez, les zombies vous entoure et vous mange" , 
     img : "assets/images/crane_mort.avif",
-    option:[{option:{text:"Recommencer", action:"goToChapter(`chapitre1`)"}}]
+    option:[{option1:{text:"Recommencer", action:"goToChapter(`chapitre1`)"}}]
     },
     chapitre12 : {
     subtitle : "Fin",
     text : "Vous êtes arriver a un refuge! bravo!!!" ,  
     img : "assets/images/masque.jpg",
-    option:[{option:{text:"Recommencer", action:"goToChapter(`chapitre1`)"}}]
+    option:[{option1:{text:"Recommencer", action:"goToChapter(`chapitre1`)"}}]
     }
     } 
-function goToChapter(chapterName){
+
+
+
+function goToChapter(chapterName){ 
 document.querySelector(".chapitre").innerHTML=chaptersObj[chapterName]["subtitle"];
 document.querySelector(".text").innerHTML=chaptersObj[chapterName]["text"];
-document.querySelector(".image").innerHTML="<img src="+chaptersObj[chapterName]["img"]+" class=`image_1`>";
+document.querySelector(".imagechanger").innerHTML= `<img src="${chaptersObj[chapterName]["img"]}" class="image">`
 document.querySelector(".option1").innerHTML=chaptersObj[chapterName]["option"][0]["option1"]["text"];
 document.querySelector(".option2").innerHTML=chaptersObj[chapterName]["option"][0]["option2"]["text"];
 document.querySelector(".option3").innerHTML=chaptersObj[chapterName]["option"][0]["option3"]["text"];
-test1 = chaptersObj[chapterName]["option"][0]["option3"]["action"]
-test2 = chaptersObj[chapterName]["option"][1]["option3"]["action"]
-test3 = chaptersObj[chapterName]["option"][2]["option3"]["action"]
 
+function click2(){
+chaptersObj[chapterName]["option"][0]["option2"]["action"];
+};
+function click3(){
+chaptersObj[chapterName]["option"][0]["option3"]["action"];
+};
 };
 
 
+function click1(chapterName){
+chaptersObj[chapterName]["option"][0]["option1"]["action"];
+};
 
-
-goToChapter("chapitre1")

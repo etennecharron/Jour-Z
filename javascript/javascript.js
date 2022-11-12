@@ -2,13 +2,13 @@
 let chaptersObj = {
         chapitre1 : {
         subtitle : "Le réveil",
-        text : "Vous vous réveiller et comencer votre petite routine matinal. En même temps que vous vous habiller vous commencer à entendre des cris a l'exterieur de votre maison." , 
+        text : "Vous vous réveillez et commencez votre petite routine matinal. En même temps que vous vous habillez vous commencez à entendre des cris a l'extérieur de votre maison." , 
         img : "assets/images/paysage_orange.jpg",
         option:[{text:"Sortire dehors", action:"keyIsNotFound()"}]
         },
         chapitre2 : {
         subtitle : "Chaos",
-        text : "Vous voyez des gens s'enfuire des créatues ressemblanttes a des humains décomposer. La ville que vous connaissier est devenus chaos et ceux qui ne cours pas asser vite se font manger vivant, il faut que vous trouvez une solution pour échapper aux créature mangeuses de chaires qui hante les rues" , 
+        text : "Vous voyez des gens s'enfuire des créatures ressemblants à des humains décomposés. La ville que vous connaissiez est devenus chaos et ceux qui ne cours pas asser vite se font manger vivant, il faut que vous trouvez une solution pour échapper aux créatures mangeuses de chaires qui hantent les rues" , 
         img : "assets/images/zombies_mains.jpg",
         option:[{text:"Courir vers voiture", action:"goToChapter(`chapitre3`)"},
                 {text:"Courir dans la rue", action:"goToChapter(`chapitre2mort`)"},

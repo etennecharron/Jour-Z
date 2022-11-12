@@ -16,19 +16,19 @@ let chaptersObj = {
         },
         chapitre2mort : {
         subtitle : "Mort dévoré",
-        text : "Vous vous mettez a courir dans tous les senses comme tous le monde. Malhereusement pour vous, une des créatures cours plus vite que vous et vous dévore." , 
+        text : "Vous vous mettez à courir dans tous les sens comme tout le monde. Malhereusement pour vous, une des créatures cours plus vite que vous et vous dévore." , 
         img : "assets/images/crane_mort.avif",
         option:[{text:"Recommencer", action:"goToChapter(`chapitre1`)"}]
         },
         chapitre2p1 : {
         subtitle : "Recherche",
-        text : "Vous retournez rapidement dans votre maison en espérant avoir ne pas avoir été vus par les créature que vous deviné être des zombies. Vous fouiller un peu partout pour trouver des objets qui pourait vous être utiles a votre survie." , 
+        text : "Vous retournez rapidement dans votre maison en espérant avoir ne pas avoir été vue par les créatures que vous devinez être des zombies. Vous fouillez un peu partout pour trouver des objets qui pourraient vous êtres utile à votre survie." , 
         img : "assets/images/clée.jpg",
         option:[{text:"Suite", action:"keyIsFound()"}]
         },
         chapitre2p2 : {
         subtitle : "Décision",
-        text : "Finallement, vous avez rapidement réussis a trouvez les clées de votre voiture et avez constater que vous avez asser de nourriture pour survire une semaine environ dans votre maison. Vous arrivez donc a la décision de sois partire de votre maison en voiture ou rester le plus longtemps possible dans votre maison pour survire à l'apocalipse." , 
+        text : "Finalement, vous avez rapidement réussis à trouver les clés de votre voiture et avez constater que vous avez asser de nourriture pour survivre une semaine environ dans votre maison. Vous arrivez donc à la décision de sois partir de votre maison en voiture ou rester le plus longtemps possible dans votre maison pour survire à l'apocalipse." , 
         img : "assets/images/maison.jpg",
         option:[{text:"Rester", action:"goToChapter(`chapitre2p2mort`)"},
                 {text:"Partir", action:"goToChapter(`chapitre3`)"}]

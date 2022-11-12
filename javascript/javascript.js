@@ -55,6 +55,7 @@ let chaptersObj = {
         subtitle : "Fuite",
         text : "Vous avez réssis à rentrer dans votre voiture et vous vous enfuiller des zombies qui sont dans la rue. Vous remarquez que votre ville au complet est remplis de zombie et que probablement que les villes voisines le sont aussi." , 
         img : "assets/images/route.jpg",
+        video : "assets/video/voiture_roule.mp4",
         option:[{text:"Suite", action:"goToChapter(`chapitre5`)"}]
         },
         chapitre5 : {
@@ -137,13 +138,23 @@ let chaptersObj = {
     
     
     
+    
+  /*
+        if(chaptersObj.chaptersObj.video){
+                document.querySelector(".imagechanger").innerHTML= `<video src="${chaptersObj[chapterName]["img"]}" class="image">`   
+               }
+               else{
+                document.querySelector(".imagechanger").innerHTML= `<img src="${chaptersObj[chapterName]["img"]}" class="image">`
+               }
+    */
+   
     function goToChapter(chapterName){ 
-    /*change le texte dans la page*/    
+    /*change le texte dans la page*/
     document.querySelector(".chapitre").innerHTML=chaptersObj[chapterName]["subtitle"];
     document.querySelector(".text").innerHTML=chaptersObj[chapterName]["text"];
     /*change image*/
-    document.querySelector(".imagechanger").innerHTML= `<img src="${chaptersObj[chapterName]["img"]}" class="image">`
-    /*Fais apparaître les boutons et les fais fonctionner*/ 
+
+    /*Fais apparaître les boutons et les fais fonctionner*/
     let choix = document.querySelector(".choix");
     choix.innerHTML = ""
     for(element of chaptersObj[chapterName]["option"]){
@@ -154,8 +165,21 @@ let chaptersObj = {
             btnChoix.setAttribute("type","button")
             choix.appendChild(btnChoix)
     }
-    };
+    console.log(chaptersObj[chapterName]["video"])
     
+    if(chaptersObj[chapterName]["video"]){
+        document.querySelector(".imagechanger").innerHTML= `<video src="${chaptersObj[chapterName]["video"]}" class="image" loop>`
+       document.querySelector(".image").play()
+    }
+
+    else{
+        document.querySelector(".imagechanger").innerHTML= `<img src="${chaptersObj[chapterName]["img"]}" class="image">`
+    }
+    
+    
+    };
+ 
+
 
     keyFounded = false
     function keyIsNotFound(){
@@ -175,8 +199,6 @@ let chaptersObj = {
     }
     }
 
-
-
-
     /*met la page au premier chapitre*/
     goToChapter("chapitre1")
+    

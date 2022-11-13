@@ -55,7 +55,7 @@ let chaptersObj = {
         subtitle : "Fuite",
         text : "Vous avez réssis à rentrer dans votre voiture et vous vous enfuiller des zombies qui sont dans la rue. Vous remarquez que votre ville au complet est remplis de zombie et que probablement que les villes voisines le sont aussi." , 
         img : "assets/images/route.jpg",
-        video : "assets/video/voiture_roule.mp4",
+        video : "assets/videos/voiture_roule.mp4",
         option:[{text:"Suite", action:"goToChapter(`chapitre5`)"}]
         },
         chapitre5 : {
@@ -79,20 +79,21 @@ let chaptersObj = {
         },
         chapitre7 : {
         subtitle : "Sauvetage",
-        text : "Au moment que vous entrez dans votre voiture pour partire, un hommme sortis de nul part cours vers vous en criant a l'aide! Des hommes armé ressemblant a des bandits lui cours après. Désirer vous le sauver?" , 
+        text : "Au moment que vous entrez dans votre voiture pour partire, une femme sortis de nul part cours vers vous en criant a l'aide! Des hommes armé ressemblant a des bandits lui cours après. Désirer vous la sauver?" , 
         img : "assets/images/fuite.jpg",
+        video : "assets/videos/femme_cours.mp4",
         option:[{text:"Oui", action:"goToChapter(`chapitre8`)"},
                 {text:"Non", action:"goToChapter(`chapitre7mort`)"}]
         },
         chapitre7mort : {
         subtitle : "Mort tiré",
-        text : "Vous décidez de ne pas l'aidé. En même temps que vous parter avec votre voiture vous regarder dans votre mirroir et voyer l'homme se faire tirer dessus par les bandits. Malheureusement pour vous, une balle perdus vous traverse la têtes et vous mourez instentanément au volant de votre voiture." , 
+        text : "Vous décidez de ne pas l'aidé. En même temps que vous parter avec votre voiture vous regarder dans votre mirroir et voyer la femme se faire tirer dessus par les bandits. Malheureusement pour vous, une balle perdus vous traverse la têtes et vous mourez instentanément au volant de votre voiture." , 
         img : "assets/images/crane_mort.avif",
         option:[{text:"Recommencer", action:"goToChapter(`chapitre1`)"}]
         },
         chapitre8 : {
         subtitle : "Le mort",
-        text : "Vous décidez de l'embarquer dans votre voiture!, vous voyez les balles défiller autours de vous en même temps que vous vous enfuyer. Après vous êtes enfuis, vous réaliser que l'homme que vous avez sauvé a été toucher et est en trains de se vider de son sang. Avant de mourir, il vous confis les coordoné d'un refuge qui serais situé a gauche de la prochaine ville dans votre itinéraire pour quitter le pays" , 
+        text : "Vous décidez de l'embarquer dans votre voiture!, vous voyez les balles défiller autours de vous en même temps que vous vous enfuyer. Après vous êtes enfuis, vous réaliser que la femme que vous avez sauvé a été toucher et est en trains de se vider de son sang. Avant de mourir, elle vous confis les coordoné d'un refuge qui serais situé a gauche de la prochaine ville dans votre itinéraire pour quitter le pays" , 
         img : "assets/images/mort.jpg",
         option:[{text:"Suite", action:"goToChapter(`chapitre9`)"}]
         },   
@@ -132,23 +133,17 @@ let chaptersObj = {
         subtitle : "Fin",
         text : "Vous avez tournez a gauche et vous avez réussis le refuge, félicitation!!!" ,
         img : "assets/images/masque.jpg",
+        video : "assets/videos/militaire_danse.mp4",
         option:[{text:"Recommencer", action:"goToChapter(`chapitre1`)"}]
         }
         } 
-    
-    
-    
-    
-  /*
-        if(chaptersObj.chaptersObj.video){
-                document.querySelector(".imagechanger").innerHTML= `<video src="${chaptersObj[chapterName]["img"]}" class="image">`   
-               }
-               else{
-                document.querySelector(".imagechanger").innerHTML= `<img src="${chaptersObj[chapterName]["img"]}" class="image">`
-               }
-    */
    
+    
+    let sonTransitionChapitre = new Audio("assets/audios/zombie_grogne.mp3")
+
     function goToChapter(chapterName){ 
+        /*son de transion*/ 
+    sonTransitionChapitre.play()
     /*change le texte dans la page*/
     document.querySelector(".chapitre").innerHTML=chaptersObj[chapterName]["subtitle"];
     document.querySelector(".text").innerHTML=chaptersObj[chapterName]["text"];

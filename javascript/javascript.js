@@ -17,7 +17,7 @@ let chaptersObj = {
         chapitre2mort: {
                 subtitle: "Mort dévoré",
                 text: "Vous vous mettez à courir dans tous les sens comme tout le monde. Malhereusement pour vous, une des créatures cours plus vite que vous et vous dévore.",
-                img: "assets/images/crane_mort.avif",
+                img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre2p1: {
@@ -36,7 +36,7 @@ let chaptersObj = {
         chapitre2p2mort: {
                 subtitle: "Mort lente",
                 text: "Quelque heures plus tard les zombies on réaliser que vous vous cachier dans votre maison et on commencer à rentrer par les fenêtres. Vous êtes malheureusement incapable de vous défendre contre autents de zombies et ils vous manges tranquillement pendant que vous criez à l'aide",
-                img: "assets/images/crane_mort.avif",
+                img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre3: {
@@ -48,7 +48,7 @@ let chaptersObj = {
         chapitre3mort: {
                 subtitle: "Mort figée",
                 text: "Vous courez vers votre voiture et vous tenter d'ouvir la porte, malheureusement pour vous vous n'avez pas la clée et vous rester figer de panique. Les monstres mangeur de chair vous saute dessus et vous arrache les membres.",
-                img: "assets/images/crane_mort.avif",
+                img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre4: {
@@ -68,7 +68,7 @@ let chaptersObj = {
         chapitre5mort: {
                 subtitle: "Mort en voiture",
                 text: "Vous roulez quelque heures avant de réaliser que vous n'avez plus de gaz. Votre voiture arrête d'avancer au millieux de nul part et vous ne savez pas où vous êtes. En sortant de votre voiture un zombie que vous n'aviez pas vus saute sur votre cous et vous arrache la tête. ",
-                img: "assets/images/crane_mort.avif",
+                img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre6: {
@@ -88,7 +88,7 @@ let chaptersObj = {
         chapitre7mort: {
                 subtitle: "Mort tiré",
                 text: "Vous décidez de ne pas l'aidé. En même temps que vous parter avec votre voiture vous regarder dans votre mirroir et voyer la femme se faire tirer dessus par les bandits. Malheureusement pour vous, une balle perdus vous traverse la têtes et vous mourez instentanément au volant de votre voiture.",
-                img: "assets/images/crane_mort.avif",
+                img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre8: {
@@ -107,7 +107,7 @@ let chaptersObj = {
         chapitre9mort: {
                 subtitle: "Mort tué",
                 text: "Vous refusez de payer la taxe. Les bandits furieux, vous jètes hors de votre voiture et vous fusilles",
-                img: "assets/images/crane_mort.avif",
+                img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre10: {
@@ -126,7 +126,7 @@ let chaptersObj = {
         chapitre11mort: {
                 subtitle: "Mort perdus",
                 text: "Vous tournez a droite et vous vous perdez. vous tournez sur un cul-de-sac et des zombies vous empêche de faire marche arrières. Les zombies réussis a rentrer dans votre voiture et vous dévore le haut du corp.",
-                img: "assets/images/crane_mort.avif",
+                img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre12: {
@@ -144,6 +144,7 @@ let sonTransitionChapitre = new Audio("assets/audios/zombie_grogne.mp3")
 function goToChapter(chapterName) {
         localStorage.setItem("chapitre", chapterName)
         /*son de transion*/
+        sonTransitionChapitre.currentTime = 0;
         sonTransitionChapitre.play()
         /*change le texte dans la page*/
         document.querySelector(".chapitre").innerHTML = chaptersObj[chapterName]["subtitle"];
@@ -214,3 +215,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 });
 
+
+
+/*
+if(chaptersObj[chapterName].video != undefined){
+        mediaTag = `<ideo src="assets/${chatpersObj[chapterName].video"}" loop muted autoplay class="image">`;
+}
+*/

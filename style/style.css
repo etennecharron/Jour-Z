@@ -71,10 +71,10 @@ button{
     align-items: center;
     border-right: solid black 2px;
     border-left: solid black 2px;
-    
     border-top:solid black 2px;
     font-family: 'Cutive Mono', monospace;
     font-size:20px;
+    cursor:pointer;
 }
 button:nth-child(3){
     border-right: 1px;

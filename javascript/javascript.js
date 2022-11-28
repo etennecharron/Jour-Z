@@ -4,7 +4,7 @@ let chaptersObj = {
                 subtitle: "Le réveil",
                 text: "Vous vous réveillez et commencez votre petite routine matinal. En même temps que vous vous habillez vous commencez à entendre des cris a l'extérieur de votre maison.",
                 img: "assets/images/paysage_orange.jpg",
-                option: [{ text: "Sortire dehors", action: "keyIsNotFound()" }]
+                option: [{ text: "Sortir dehors", action: "keyIsNotFound()" }]
         },
         chapitre2: {
                 subtitle: "Chaos",
@@ -217,8 +217,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-/*
-if(chaptersObj[chapterName].video != undefined){
-        mediaTag = `<ideo src="assets/${chatpersObj[chapterName].video"}" loop muted autoplay class="image">`;
+/*******5.1*******/
+function reset (){
+localStorage.clear();
+goToChapter("chapitre1")
 }
-*/
+
+let btnReset = document.querySelector(".reset")
+
+btnReset.addEventListener("click",function(){
+reset()
+})

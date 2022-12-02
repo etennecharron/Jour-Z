@@ -144,8 +144,7 @@ let sonTransitionChapitre = new Audio("assets/audios/zombie_grogne.mp3")
 function goToChapter(chapterName) {
         localStorage.setItem("chapitre", chapterName)
         /*son de transion*/
-        sonTransitionChapitre.currentTime = 0;
-        sonTransitionChapitre.play()
+      
         /*change le texte dans la page*/
         document.querySelector(".chapitre").innerHTML = chaptersObj[chapterName]["subtitle"];
         document.querySelector(".text").innerHTML = chaptersObj[chapterName]["text"];
@@ -171,7 +170,15 @@ function goToChapter(chapterName) {
                 document.querySelector(".imagechanger").innerHTML = `<img src="${chaptersObj[chapterName]["img"]}" class="image">`
         }
 
-
+        
+        if(sons == true){
+        sonTransitionChapitre.currentTime = 0;
+        sonTransitionChapitre.play()
+        }
+        else{
+                sonTransitionChapitre.currentTime = 0;
+                sonTransitionChapitre.pause();
+        }
 };
 
 
@@ -217,7 +224,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-/*******5.1*******/
+/*******************5.1******************/
+
+/**reset**/
 function reset (){
 localStorage.clear();
 goToChapter("chapitre1")
@@ -228,3 +237,9 @@ let btnReset = document.querySelector(".reset")
 btnReset.addEventListener("click",function(){
 reset()
 })
+
+/**sons**/
+let son = true;
+localStorage.setItem("son", true);
+let checkboxSon = document.querySelector(".checkBoxSons")
+

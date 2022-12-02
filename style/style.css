@@ -1,4 +1,4 @@
-
+*{user-select: none;}
 p{
     font-family: 'Cutive Mono', monospace;
     margin: 0;
@@ -100,8 +100,41 @@ button:hover{
 
 
 .reset{
-    align-self:flex-end;
     height:50px;
     width:170px;
     margin-right:10px;
+}
+
+.checkBoxSons{
+    width:40px;
+    height:40px;
+    align-self:center;
+    cursor: pointer;
+}
+
+.parametre{
+width:100%;
+display: flex;
+justify-content: space-between;
+}
+
+.labelSon{
+    font-family:'Cutive Mono', monospace;
+    cursor:pointer;
+    font-size:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-weight:bold;
+}
+
+.checkBoxSons{
+appearance: none;
+border:solid black 2px;
+background-color:rgba(227, 100, 20, 20%);
+}
+
+.checkBoxSons:checked{
+    background-color:#c25815;
 }

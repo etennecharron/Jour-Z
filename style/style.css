@@ -129,12 +129,13 @@ justify-content: space-between;
     font-weight:bold;
 }
 
+
 .checkBoxSons{
-appearance: none;
+appearance:none;
 border:solid black 2px;
-background-color:rgba(227, 100, 20, 20%);
 }
 
 .checkBoxSons:checked{
-    background-color:#c25815;
+background-image:url("../assets/images/mort.jpg");
+background-size: cover;
 }

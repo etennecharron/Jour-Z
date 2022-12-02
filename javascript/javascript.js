@@ -171,7 +171,7 @@ function goToChapter(chapterName) {
         }
 
         
-        if(sons == true){
+        if(son == true){
         sonTransitionChapitre.currentTime = 0;
         sonTransitionChapitre.play()
         }
@@ -240,6 +240,15 @@ reset()
 
 /**sons**/
 let son = true;
-localStorage.setItem("son", true);
 let checkboxSon = document.querySelector(".checkBoxSons")
 
+checkboxSon.addEventListener("change",function(){
+        if(checkboxSon.checked == false){
+                son = false;
+        }
+        else{
+                son = true;
+        }
+        console.log("checkbox" +" "+checkboxSon.checked)
+        console.log("son" +" "+ son)
+})

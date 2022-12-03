@@ -2,13 +2,13 @@
 let chaptersObj = {
         chapitre1: {
                 subtitle: "Le réveil",
-                text: "Vous vous réveillez et commencez votre petite routine matinal. En même temps que vous vous habillez vous commencez à entendre des cris a l'extérieur de votre maison.",
+                text: "Vous vous réveillez et commencez votre petite routine matinale. En même temps que vous vous habillez vous commencez à entendre des cris a l'extérieur de votre maison.",
                 img: "assets/images/paysage_orange.jpg",
                 option: [{ text: "Sortir dehors", action: "keyIsNotFound()" }]
         },
         chapitre2: {
                 subtitle: "Chaos",
-                text: "Vous voyez des gens s'enfuire des créatures ressemblants à des humains décomposés. La ville que vous connaissiez est devenus chaos et ceux qui ne cours pas asser vite se font manger vivant, il faut que vous trouvez une solution pour échapper aux créatures mangeuses de chaires qui hantent les rues",
+                text: "Vous voyez des gens s'enfuir des créatures ressemblant à des humains décomposés. La ville où vous connaissiez est devenus chaos et ceux qui ne courent pas assez vite se font manger vivant, il faut que vous trouviez une solution pour échapper aux créatures mangeuses de chaires qui hantent les rues",
                 img: "assets/images/zombies_mains.jpg",
                 option: [{ text: "Courir vers voiture", action: "goToChapter(`chapitre3`)" },
                 { text: "Courir dans la rue", action: "goToChapter(`chapitre2mort`)" },
@@ -16,70 +16,70 @@ let chaptersObj = {
         },
         chapitre2mort: {
                 subtitle: "Mort dévoré",
-                text: "Vous vous mettez à courir dans tous les sens comme tout le monde. Malhereusement pour vous, une des créatures cours plus vite que vous et vous dévore.",
+                text: "Vous vous mettez à courir dans tous les sens comme tout le monde. Malheureusement pour vous, une des créatures court plus vite que vous et vous dévore.",
                 img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre2p1: {
                 subtitle: "Recherche",
-                text: "Vous retournez rapidement dans votre maison en espérant avoir ne pas avoir été vue par les créatures que vous devinez être des zombies. Vous fouillez un peu partout pour trouver des objets qui pourraient vous êtres utile à votre survie.",
+                text: "Vous retournez rapidement dans votre maison en espérant avoir ne pas avoir été vue par les créatures que vous devinez être des zombies. Vous fouillez un peu partout pour trouver des objets qui pourraient vous êtres utiles à votre survie.",
                 img: "assets/images/clée.jpg",
                 option: [{ text: "Suite", action: "keyIsFound()" }]
         },
         chapitre2p2: {
                 subtitle: "Décision",
-                text: "Finalement, vous avez rapidement réussis à trouver les clés de votre voiture et avez constater que vous avez asser de nourriture pour survivre une semaine environ dans votre maison. Vous arrivez donc à la décision de sois partir de votre maison en voiture ou rester le plus longtemps possible dans votre maison pour survire à l'apocalipse.",
+                text: "Finalement, vous avez rapidement réussi à trouver les clés de votre voiture et avez constaté que vous avez assez de nourriture pour survivre une semaine environ dans votre maison. Vous arrivez donc à la décision de rester pour survivre à l'apocalypse ou de partir.",
                 img: "assets/images/maison.jpg",
                 option: [{ text: "Rester", action: "goToChapter(`chapitre2p2mort`)" },
                 { text: "Partir", action: "goToChapter(`chapitre3`)" }]
         },
         chapitre2p2mort: {
                 subtitle: "Mort lente",
-                text: "Quelque heures plus tard les zombies on réaliser que vous vous cachier dans votre maison et on commencer à rentrer par les fenêtres. Vous êtes malheureusement incapable de vous défendre contre autents de zombies et ils vous manges tranquillement pendant que vous criez à l'aide",
+                text: "Quelques heures plus tard les zombies ont réalisé que vous vous cachez dans votre maison et ont commencé à rentrer par les fenêtres. Vous êtes malheureusement incapable de vous défendre contre autant de zombies et ils vous mangent tranquillement pendant que vous criez à l'aide.",
                 img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre3: {
                 subtitle: "Voiture",
-                text: "Vous assayer de rentrer dans votre voiture",
+                text: "Vous assayer de rentrer dans votre voiture.",
                 img: "assets/images/voiture.jpg",
                 option: [{ text: "Avez-vous les clées?", action: "keyImpact()" }]
         },
         chapitre3mort: {
                 subtitle: "Mort figée",
-                text: "Vous courez vers votre voiture et vous tenter d'ouvir la porte, malheureusement pour vous vous n'avez pas la clée et vous rester figer de panique. Les monstres mangeur de chair vous saute dessus et vous arrache les membres.",
+                text: "Vous courez vers votre voiture et vous tenter d'ouvrir la porte, malheureusement pour vous, vous n'avez pas la clé et vous restez figé de panique. Les monstres mangeurs de chair vous sautent dessus et vous arrachent les membres.",
                 img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre4: {
                 subtitle: "Fuite",
-                text: "Vous avez réssis à rentrer dans votre voiture et vous vous enfuiller des zombies qui sont dans la rue. Vous remarquez que votre ville au complet est remplis de zombie et que probablement que les villes voisines le sont aussi.",
+                text: "Vous avez réussi à rentrer dans votre voiture et vous vous enfuyez des zombies qui sont dans la rue. Vous remarquez que votre ville au complet est remplie de zombie et que probablement que les villes voisines le sont aussi.",
                 img: "assets/images/route.jpg",
                 video: "assets/videos/voiture_roule.mp4",
                 option: [{ text: "Suite", action: "goToChapter(`chapitre5`)" }]
         },
         chapitre5: {
                 subtitle: "Destination",
-                text: "Maintenant que vous êtes parties il vous reste a choisir une destination où aller!",
+                text: "Maintenant que vous êtes parties il vous reste à choisir une destination où aller!",
                 img: "assets/images/signe_route.jpg",
                 option: [{ text: "Sotire du pays", action: "goToChapter(`chapitre5mort`)" },
                 { text: "Dépanneur", action: "goToChapter(`chapitre6`)" }]
         },
         chapitre5mort: {
                 subtitle: "Mort en voiture",
-                text: "Vous roulez quelque heures avant de réaliser que vous n'avez plus de gaz. Votre voiture arrête d'avancer au millieux de nul part et vous ne savez pas où vous êtes. En sortant de votre voiture un zombie que vous n'aviez pas vus saute sur votre cous et vous arrache la tête. ",
+                text: "Vous roulez quelques heures avant de réaliser que vous n'avez plus de gaz. Votre voiture arrête d'avancer au milieu de nulle part et vous ne savez pas où vous êtes. En sortant de votre voiture un zombie que vous n'aviez pas vu saute sur votre cou et vous arrache la tête. ",
                 img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre6: {
                 subtitle: "Essence",
-                text: "Vous avez décidez d'aller au dépanneur et vous y êtes arrivé. Vous faites le plein d'essence et voler de la nourriture",
+                text: "Vous êtes arrivé au dépanneur. Vous faites le plein d'essence et voler de la nourriture.",
                 img: "assets/images/gas.jpg",
                 option: [{ text: "Suite", action: "goToChapter(`chapitre7`)" }]
         },
         chapitre7: {
                 subtitle: "Sauvetage",
-                text: "Au moment que vous entrez dans votre voiture pour partire, une femme sortis de nul part cours vers vous en criant a l'aide! Des hommes armé ressemblant a des bandits lui cours après. Désirer vous la sauver?",
+                text: "Au moment que vous entrez dans votre voiture pour partir, une femme sortie de nulle part cours vers vous en criant à l'aide! Des hommes armés ressemblants à des bandits lui court après. Désirez-vous la sauver?",
                 img: "assets/images/fuite.jpg",
                 video: "assets/videos/femme_cours.mp4",
                 option: [{ text: "Oui", action: "goToChapter(`chapitre8`)" },
@@ -87,51 +87,51 @@ let chaptersObj = {
         },
         chapitre7mort: {
                 subtitle: "Mort tiré",
-                text: "Vous décidez de ne pas l'aidé. En même temps que vous parter avec votre voiture vous regarder dans votre mirroir et voyer la femme se faire tirer dessus par les bandits. Malheureusement pour vous, une balle perdus vous traverse la têtes et vous mourez instentanément au volant de votre voiture.",
+                text: "Vous décidez de ne pas l'aider. En même temps que vous partez avec votre voiture vous regarder dans votre miroir et voyer la femme se faire tirer dessus par les bandits. Malheureusement pour vous, une balle perdue vous traverse la tête et vous mourez instantanément au volant de votre voiture.",
                 img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre8: {
                 subtitle: "Le mort",
-                text: "Vous décidez de l'embarquer dans votre voiture!, vous voyez les balles défiller autours de vous en même temps que vous vous enfuyer. Après vous êtes enfuis, vous réaliser que la femme que vous avez sauvé a été toucher et est en trains de se vider de son sang. Avant de mourir, elle vous confis les coordoné d'un refuge qui serais situé a gauche de la prochaine ville dans votre itinéraire pour quitter le pays",
+                text: "Vous décidez de l'embarquer dans votre voiture! Après vous être enfui, vous réaliser que la femme que vous avez sauvée a été toucher et est en train de se vider de son sang. Avant de mourir, elle vous confit les coordonnés d'un refuge qui serait situé à gauche de la prochaine ville.",
                 img: "assets/images/mort.jpg",
                 option: [{ text: "Suite", action: "goToChapter(`chapitre9`)" }]
         },
         chapitre9: {
                 subtitle: "Bandit",
-                text: "Alors que vous vous dirigez vers la prochaine ville, des bandits vous coupe le chemain et vous demander de payer une taxe ",
+                text: "Alors que vous vous dirigez vers la prochaine ville, des bandits vous coupent le chemin et vous demander de payer une taxe.",
                 img: "assets/images/bandit.jpg",
                 option: [{ text: "Accepter", action: "goToChapter(`chapitre10`)" },
                 { text: "Refuser", action: "goToChapter(`chapitre9mort`)" }]
         },
         chapitre9mort: {
                 subtitle: "Mort tué",
-                text: "Vous refusez de payer la taxe. Les bandits furieux, vous jètes hors de votre voiture et vous fusilles",
+                text: "Vous refusez de payer la taxe. Les bandits furieux vous sors hors de votre voiture et vous fusille.",
                 img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre10: {
                 subtitle: "Ville",
-                text: "Vous avez accepté de payer la taxe. Les bandits vous ont pris toute votre nourriture mais au moins vous êtes enfin arrievé a la ville.",
+                text: "Vous avez accepté de payer la taxe. Les bandits vous ont pris toute votre nourriture mais au moins vous êtes enfin arrivé a la ville.",
                 img: "assets/images/ville.jpg",
                 option: [{ text: "suite", action: "goToChapter(`chapitre11`)" }]
         },
         chapitre11: {
                 subtitle: "Direction?",
-                text: "Maintenant arrivé, il faut maintenant vous souvenir de quelle coté de la ville la base se situais pour la trouvé.",
+                text: "Maintenant arrivé, il faut maintenant vous souvenir de quel côté de la ville la base se situait pour la trouver.",
                 img: "assets/images/direction.jpg",
                 option: [{ text: "gauche", action: "goToChapter(`chapitre12`)" },
                 { text: "droite", action: "goToChapter(`chapitre11mort`)" }]
         },
         chapitre11mort: {
                 subtitle: "Mort perdus",
-                text: "Vous tournez a droite et vous vous perdez. vous tournez sur un cul-de-sac et des zombies vous empêche de faire marche arrières. Les zombies réussis a rentrer dans votre voiture et vous dévore le haut du corp.",
+                text: "Vous tournez à droite et vous vous perdez. vous tournez sur un cul-de-sac mais des zombies vous empêchez de sortir. Les zombies réussissent à rentrer dans votre voiture et vous dévorent le haut du corps.",
                 img: "assets/images/crane_mort.jpg",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre12: {
                 subtitle: "Fin",
-                text: "Vous avez tournez a gauche et vous avez réussis le refuge, félicitation!!!",
+                text: "Vous avez tourné à gauche et vous avez réussi à trouver le refuge, félicitations!!",
                 img: "assets/images/masque.jpg",
                 video: "assets/videos/militaire_danse.mp4",
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
@@ -144,7 +144,7 @@ let sonTransitionChapitre = new Audio("assets/audios/zombie_grogne.mp3")
 function goToChapter(chapterName) {
         localStorage.setItem("chapitre", chapterName)
         /*son de transion*/
-      
+
         /*change le texte dans la page*/
         document.querySelector(".chapitre").innerHTML = chaptersObj[chapterName]["subtitle"];
         document.querySelector(".text").innerHTML = chaptersObj[chapterName]["text"];
@@ -170,12 +170,12 @@ function goToChapter(chapterName) {
                 document.querySelector(".imagechanger").innerHTML = `<img src="${chaptersObj[chapterName]["img"]}" class="image">`
         }
 
-        
-        if(son == true){
-        sonTransitionChapitre.currentTime = 0;
-        sonTransitionChapitre.play()
+
+        if (son == true) {
+                sonTransitionChapitre.currentTime = 0;
+                sonTransitionChapitre.play()
         }
-        else{
+        else {
                 sonTransitionChapitre.currentTime = 0;
                 sonTransitionChapitre.pause();
         }
@@ -227,28 +227,28 @@ document.addEventListener("DOMContentLoaded", function () {
 /*******************5.1******************/
 
 /**reset**/
-function reset (){
-localStorage.clear();
-goToChapter("chapitre1")
+function reset() {
+        localStorage.clear();
+        goToChapter("chapitre1")
 }
 
 let btnReset = document.querySelector(".reset")
 
-btnReset.addEventListener("click",function(){
-reset()
+btnReset.addEventListener("click", function () {
+        reset()
 })
 
 /**sons**/
 let son = true;
 let checkboxSon = document.querySelector(".checkBoxSons")
 
-checkboxSon.addEventListener("change",function(){
-        if(checkboxSon.checked == false){
+checkboxSon.addEventListener("change", function () {
+        if (checkboxSon.checked == false) {
                 son = false;
         }
-        else{
+        else {
                 son = true;
         }
-        console.log("checkbox" +" "+checkboxSon.checked)
-        console.log("son" +" "+ son)
+        console.log("checkbox" + " " + checkboxSon.checked)
+        console.log("son" + " " + son)
 })

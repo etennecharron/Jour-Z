@@ -144,3 +144,16 @@ background-color: #e36414;
 background-image:url("../assets/images/checkmark.png");
 background-size: cover;
 }
+
+
+.chapitre1{
+background-image:linear-gradient(#fac28e,#ad8157);
+}
+.chapitre1 .game{
+border-radius: 15%;
+}
+.chapitre1 .choix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

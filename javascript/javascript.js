@@ -139,12 +139,14 @@ let chaptersObj = {
 }
 
 
+
 let sonTransitionChapitre = new Audio("assets/audios/zombie_grogne.mp3")
-
+let body = document.querySelector("body")
 function goToChapter(chapterName) {
+       console.log(body.classList)
+       body.classList.remove(body.classList[0])
+        body.classList.add(chapterName)
         localStorage.setItem("chapitre", chapterName)
-        /*son de transion*/
-
         /*change le texte dans la page*/
         document.querySelector(".chapitre").innerHTML = chaptersObj[chapterName]["subtitle"];
         document.querySelector(".text").innerHTML = chaptersObj[chapterName]["text"];
@@ -169,7 +171,7 @@ function goToChapter(chapterName) {
         else {
                 document.querySelector(".imagechanger").innerHTML = `<img src="${chaptersObj[chapterName]["img"]}" class="image">`
         }
-
+/*son transition*/
 
         if (son == true) {
                 sonTransitionChapitre.currentTime = 0;
@@ -231,12 +233,11 @@ function reset() {
         localStorage.clear();
         goToChapter("chapitre1")
 }
-
 let btnReset = document.querySelector(".reset")
-
 btnReset.addEventListener("click", function () {
         reset()
 })
+
 
 /**sons**/
 let son = true;

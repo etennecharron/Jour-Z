@@ -156,4 +156,15 @@ border-radius: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
+   
+}
+
+@keyframes test{
+    0%{background-color:#e36414;}
+    50%{background-color:#fa9c61;}
+    100%{background-color:#e36414;}
+}
+
+.chapitre1 .choix button{
+    animation: test 5s linear infinite;
 }

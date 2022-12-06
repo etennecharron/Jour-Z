@@ -8,7 +8,7 @@ let chaptersObj = {
         },
         chapitre2: {
                 subtitle: "Chaos",
-                text: "Vous voyez des gens s'enfuir des créatures ressemblant à des humains décomposés. La ville où vous connaissiez est devenus chaos et ceux qui ne courent pas assez vite se font manger vivant, il faut que vous trouviez une solution pour échapper aux créatures mangeuses de chaires qui hantent les rues",
+                text: "Vous voyez des gens s'enfuir des créatures ressemblant à des humains décomposés. La ville où vous connaissiez est devenus chaos et ceux qui ne courent pas assez vite se font manger vivant, il faut que vous trouviez une solution pour échapper aux créatures mangeuses de chaires qui hantent les rues.",
                 img: "assets/images/zombies_mains.jpg",
                 option: [{ text: "Courir vers voiture", action: "goToChapter(`chapitre3`)" },
                 { text: "Courir dans la rue", action: "goToChapter(`chapitre2mort`)" },
@@ -92,7 +92,7 @@ let chaptersObj = {
                 option: [{ text: "Recommencer", action: "goToChapter(`chapitre1`)" }]
         },
         chapitre8: {
-                subtitle: "Le mort",
+                subtitle: "La morte",
                 text: "Vous décidez de l'embarquer dans votre voiture! Après vous être enfui, vous réaliser que la femme que vous avez sauvée a été toucher et est en train de se vider de son sang. Avant de mourir, elle vous confit les coordonnés d'un refuge qui serait situé à gauche de la prochaine ville.",
                 img: "assets/images/mort.jpg",
                 option: [{ text: "Suite", action: "goToChapter(`chapitre9`)" }]

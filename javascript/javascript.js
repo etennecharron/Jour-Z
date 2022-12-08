@@ -192,11 +192,15 @@ function keyIsNotFound() {
         goToChapter("chapitre2")
         localStorage.setItem("key", false)
 }
+
+
 function keyIsFound() {
         keyFounded = true
         goToChapter("chapitre2p2")
         localStorage.setItem("key", true)
 }
+
+
 function keyImpact() {
         if (keyFounded == true) {
                 goToChapter("chapitre4")

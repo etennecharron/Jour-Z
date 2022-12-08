@@ -103,7 +103,7 @@ h1 {
     margin: 0;
     margin-top: 10px;
 }
-
+s
 button:hover {
     font-weight: bolder;
 }
@@ -113,6 +113,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 .reset {
@@ -192,27 +193,36 @@ button:hover {
 }
 
 .chapitre12 h2 {
-    font-size: 80px;
+    font-size: 50px;
 }
 
 .chapitre12 .text {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
+.chapitre12 .choix{
+    justify-content:center;
+}
 .chapitre12 .contenu {
-    background-color: #fb8b24;
-    animation: test1 1s ease infinite;
+background-color:rgba(251, 133, 36,70%);
+border: dotted 2px black;
+border-right: none;
+border-left: none;
+border-bottom: none;
 }
 
 .chapitre12 button {
     border-radius: 20px;
 }
 
-.fin{
-    display: none;
+.chapitre12 .game .parametre{
+    display:none;
 }
-.chapitre12 .fin{
-    display:inline;
-
+.chapitre12 .game{
+   background-color:rgba(251, 133, 36,50%);
+}
+.chapitre12 .choix button{
+    width:80%;
+    font-size: 30px;
 }
